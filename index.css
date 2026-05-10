@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer components {
+    .button {
+        @apply bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold py-1 px-3  rounded-md
+    }
+}

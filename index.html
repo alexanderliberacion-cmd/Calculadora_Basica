@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Online</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<div id="calculator-container" class="border-2 border-gray-300 rounded-xl p-8 w-72 bg-white shadow-lg">
+    <fieldset id="calculator-screen" class="mb-4">
+        <legend class="mx-2 text-sm font-semibold text-gray-600">Calculadora Online</legend>
+        <label for="screen"></label>
+        <div class="border border-blue-500 rounded mt-1">
+            <input id="screen" type="text" value="0" readonly class="w-full text-right text-xl px-3 py-2 outline-none rounded bg-gray-50">
+        </div>
+    </fieldset>
+    <div id="button-container" class="grid grid-cols-4 gap-2">
+        <button value="7" class="button">7</button>
+        <button value="8"  class="button">8</button>
+        <button value="9"  class="button">9</button>
+        <button value="4"  class="button">4</button>
+        <button value="5"  class="button">5</button>
+        <button value="6" class="button" >6</button>
+        <button value="1" class="button">1</button>
+        <button value="2" class="button">2</button>
+        <button value="3" class="button">3</button>
+        <button value="0" class="button">0</button>
+        <button id="dot" value="dot" class="button">.</button>
+        <button id="add" value="+" class="button">+</button>
+        <button id="subtract" value="-" class="button">-</button>
+        <button id="multiply" value="*" class="button">*</button>
+        <button id="divide" value="/" class="button">/</button>
+        <button id="equals" value="=" class="button">=</button>
+        <button id="delete" value="del" class="button col-span-2">del</button>
+        <button id="clear" value="c" class="button col-span-2">c</button>
+    </div>
+</div>
+
+</body>
+</html>
