@@ -1,5 +1,3 @@
-//TODO arreglar los operadores. Dos bugs: a veces no funciona y si mezclan dos tienen un comportamiento erroneo//
-
 //Variables
 const container = document.getElementById("button-container");
 const result = document.getElementById("screen");

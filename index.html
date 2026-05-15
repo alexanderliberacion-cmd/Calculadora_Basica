@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="output.css">
 </head>
 
-<!-- TODO mejorarlo para moviles-->
+<!-- TODO mejorarlo para moviles y ponerle toggle de modo dark y tambien cambiar estilos para le modo dark-->
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
-<div id="calculator-container" class="border-2 border-gray-300 rounded-xl p-8 w-72 bg-white shadow-lg">
+<body class="bg-gray-100 min-h-screen  flex items-center justify-center sm:px-3.5">
+<div id="calculator-container" class="border-2 border-gray-300 rounded-xl p-8 w-72 bg-white shadow-lg sm:w-full sm:max-w-xs">
     <fieldset id="calculator-screen" class="mb-4">
-        <legend class="mx-2 text-sm font-semibold text-gray-600">Calculadora Online</legend>
+        <legend class="mx-2 text-sm font-semibold text-gray-600 sm:text-2xl">Calculadora Online</legend>
         <label for="screen"></label>
         <div class="border border-blue-500 rounded mt-1">
             <input id="screen" type="text" value="0" readonly class="w-full text-right text-xl px-3 py-2 outline-none rounded bg-gray-50">
