@@ -1,3 +1,5 @@
+//TODO Activate float on the result by using
+
 //Variables
 const container = document.getElementById("button-container");
 const result = document.getElementById("screen");
@@ -137,3 +139,12 @@ function divide(a, b) {
     if (b === 0) return "Error: div/0";   // throw rompe sin try/catch en la UI
     return a / b;
 }
+
+// Activar el dark mode
+const toggle = document.getElementById("theme-toggle");
+toggle.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+
+    toggle.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
+
+});

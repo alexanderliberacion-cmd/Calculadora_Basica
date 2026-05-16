@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Calculadora Online</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="index.js" defer></script>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="output.css" />
 </head>
 
-<!-- TODO mejorarlo para moviles y ponerle toggle de modo dark y tambien cambiar estilos para le modo dark-->
 
-<body class="bg-gray-100 min-h-screen  flex items-center justify-center sm:px-3.5">
-<div id="calculator-container" class="border-2 border-gray-300 rounded-xl p-8 w-72 bg-white shadow-lg sm:w-full sm:max-w-xs">
+<body class="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900 sm:px-3.5">
+<div id="calculator-container" class="w-72 rounded-xl border-2 border-gray-300 dark:border-purple-300 bg-white dark:bg-gray-950 p-8 shadow-lg sm:w-full sm:max-w-xs">
     <fieldset id="calculator-screen" class="mb-4">
-        <legend class="mx-2 text-sm font-semibold text-gray-600 sm:text-2xl">Calculadora Online</legend>
+        <legend class="mx-2 text-sm font-semibold text-gray-600 sm:text-2xl dark:text-purple-500 ">Calculadora Online</legend>
         <label for="screen"></label>
-        <div class="border border-blue-500 rounded mt-1">
-            <input id="screen" type="text" value="0" readonly class="w-full text-right text-xl px-3 py-2 outline-none rounded bg-gray-50">
+        <div class="mt-1 rounded border border-blue-500 dark:border-purple-300">
+            <input id="screen" type="text" value="0" readonly class="w-full rounded bg-gray-50 dark:bg-black dark:text-purple-600 dark:text-shadow-pink-100 px-3 py-2 text-right text-xl outline-none" />
         </div>
     </fieldset>
+    <button id="theme-toggle" class="darkModeButton">☀️</button>
     <div id="button-container" class="grid grid-cols-4 gap-2">
         <button value="7" class="button">7</button>
-        <button value="8"  class="button">8</button>
-        <button value="9"  class="button">9</button>
-        <button value="4"  class="button">4</button>
-        <button value="5"  class="button">5</button>
-        <button value="6" class="button" >6</button>
+        <button value="8" class="button">8</button>
+        <button value="9" class="button">9</button>
+        <button value="4" class="button">4</button>
+        <button value="5" class="button">5</button>
+        <button value="6" class="button">6</button>
         <button value="1" class="button">1</button>
         <button value="2" class="button">2</button>
         <button value="3" class="button">3</button>
@@ -40,6 +40,5 @@
         <button id="clear" value="c" class="button col-span-2">c</button>
     </div>
 </div>
-
 </body>
 </html>
