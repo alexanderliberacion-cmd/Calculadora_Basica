@@ -188,6 +188,9 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -224,6 +227,9 @@
   .grid {
     display: grid;
   }
+  .h-px {
+    height: 1px;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -232,6 +238,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .w-px {
+    width: 1px;
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -244,6 +253,9 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -274,6 +286,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
@@ -297,6 +312,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-gray-600 {
     color: var(--color-gray-600);
@@ -335,16 +353,6 @@
       border-color: var(--color-purple-300);
     }
   }
-  .dark\:border-purple-400 {
-    &:where(.dark, .dark *) {
-      border-color: var(--color-purple-400);
-    }
-  }
-  .dark\:border-purple-500 {
-    &:where(.dark, .dark *) {
-      border-color: var(--color-purple-500);
-    }
-  }
   .dark\:bg-black {
     &:where(.dark, .dark *) {
       background-color: var(--color-black);
@@ -360,9 +368,9 @@
       background-color: var(--color-gray-950);
     }
   }
-  .dark\:bg-purple-500 {
+  .dark\:text-purple-300 {
     &:where(.dark, .dark *) {
-      background-color: var(--color-purple-500);
+      color: var(--color-purple-300);
     }
   }
   .dark\:text-purple-500 {

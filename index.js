@@ -16,7 +16,7 @@ function handleInput(value) {
     console.log(`INPUT: "${value}" | num1="${num1}" num2="${num2}" op="${operator}" opPressed=${operatorPressed} justCalc=${justCalculated}`);
 
     //Checks if is not a nan value
-    if (!isNaN(value) && value !== " ") {
+    if ((!isNaN(value) && value !== " ") || value === ".") {
         // Si no se ha pulsado el operador añade el valor del numero 1 y lo muestra
         // Cuando se pulse añade el del do y realiza la operacion
         if (!operatorPressed) {
@@ -32,7 +32,9 @@ function handleInput(value) {
         } else {
             if(num2 === "0" && value === "0") return;
             if (value === "." && num2 === "") num2 = "0";
+
             if (value === "." && num2.includes(".")) return;
+
             num2 += value;
             result.value = num2;
         }
@@ -50,7 +52,8 @@ function handleInput(value) {
 
         //Checkea que el valor es = y si lo es muestra el resultado de las operacione
     } else if (value === "=") {
-        if(!num1 || !num2 || !operator) return; // Guarda si faltan datos
+        if(!num1 || !num2 || !operator) return;
+// Guarda si faltan datos
         const res = calculate();
         result.value = res;
         num1 = String(res);
@@ -82,10 +85,28 @@ function handleInput(value) {
 function calculate() {
     const a = parseFloat(num1);
     const b = parseFloat(num2);
-    if (operator === "+") return add(a, b);
-    if (operator === "-") return subtract(a, b);
-    if (operator === "*") return multiply(a, b);
-    if (operator === "/") return divide(a, b);
+
+    if (operator === "+") {
+        raw = add(a, b);
+        return parseFloat(raw.toFixed(10)); // Permite sumar con decimales
+    }
+    if (operator === "-") {
+        raw = subtract(a, b);
+        return parseFloat(raw.toFixed(10));  // Permite restar con decimales
+    }
+    if (operator === "*") {
+        raw = multiply(a, b);
+        return parseFloat(raw.toFixed(10));  // Permite multiplicar con decimales
+    }
+    if (operator === "/") {
+        raw = divide(a, b);
+        //Checkea si el segundo numero es 0 y da error
+        if (b === 0) {
+            return Error;
+        }
+        return parseFloat(raw.toFixed(10));  // Permite dividir con decimales
+    }
+
 }
 
 //Esto activa la calculadora en modo click

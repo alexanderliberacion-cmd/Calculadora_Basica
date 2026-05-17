@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @layer components {
     .button {
         @apply bg-linear-to-r from-blue-500 to-blue-700 text-white font-semibold py-1 px-3 rounded-md sm:py-5 sm:px-5 sm:gap-4 sm:text-xl dark:bg-linear-to-r dark:from-purple-600 dark:to-pink-400 dark:font-bold dark:border-purple-500

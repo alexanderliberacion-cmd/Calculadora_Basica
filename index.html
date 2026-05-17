@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <title>Calculadora Online</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" name="description" content="Calculadora Online basica para operaciones simples" />
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="output.css" />
 </head>
 
 
-<body class="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900 sm:px-3.5">
-<div id="calculator-container" class="w-72 rounded-xl border-2 border-gray-300 dark:border-purple-300 bg-white dark:bg-gray-950 p-8 shadow-lg sm:w-full sm:max-w-xs">
+<body class="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-900 sm:px-3.5" role="main">
+<main id="calculator-container" class="w-72 rounded-xl border-2 border-gray-300 dark:border-purple-300 bg-white dark:bg-gray-950 p-8 shadow-lg sm:w-full sm:max-w-xs">
     <fieldset id="calculator-screen" class="mb-4">
         <legend class="mx-2 text-sm font-semibold text-gray-600 sm:text-2xl dark:text-purple-500 ">Calculadora Online</legend>
-        <label for="screen"></label>
         <div class="mt-1 rounded border border-blue-500 dark:border-purple-300">
-            <input id="screen" type="text" value="0" readonly class="w-full rounded bg-gray-50 dark:bg-black dark:text-purple-600 dark:text-shadow-pink-100 px-3 py-2 text-right text-xl outline-none" />
+            <label for="screen" class="absolute w-px h-px p-0 overflow-hidden whitespace-nowrap">Calculator Result</label>
+            <input id="screen" type="text" value="0" readonly class="w-full rounded bg-gray-50 dark:bg-black dark:text-purple-300 dark:text-shadow-pink-100 px-3 py-2 text-right text-xl outline-none" />
         </div>
     </fieldset>
     <button id="theme-toggle" class="darkModeButton">☀️</button>
@@ -39,6 +39,6 @@
         <button id="delete" value="del" class="button col-span-2">del</button>
         <button id="clear" value="c" class="button col-span-2">c</button>
     </div>
-</div>
+</main>
 </body>
 </html>
